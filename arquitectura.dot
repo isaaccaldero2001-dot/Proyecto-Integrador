@@ -1,0 +1,17 @@
+
+digraph G {
+  rankdir=TB; bgcolor="white"; node [shape=box, style="rounded,filled", fillcolor="#f6f8fa", fontname="Arial", fontsize=10]; edge [fontname="Arial", fontsize=9];
+  inicio [shape=oval, fillcolor="#d1f5d3", label="Inicio"];
+  cargar [label="Cargar inventario JSON"];
+  menu [shape=diamond, fillcolor="#fff3cd", label="Seleccionar opción"];
+  reg [label="Registrar producto"];
+  mov [label="Entrada/Salida de stock"];
+  list [label="Listar productos"];
+  alert [label="Mostrar alertas"];
+  rep [label="Generar reporte"];
+  guardar [label="Guardar cambios"];
+  fin [shape=oval, fillcolor="#f8d7da", label="Salir"];
+  inicio -> cargar -> menu;
+  menu -> reg [label="1"]; menu -> mov [label="2"]; menu -> list [label="3"]; menu -> alert [label="4"]; menu -> rep [label="5"]; menu -> fin [label="0"];
+  reg -> guardar -> menu; mov -> guardar; list -> menu; alert -> menu; rep -> menu;
+}

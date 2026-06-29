@@ -1,0 +1,11 @@
+
+digraph G {
+  rankdir=LR; bgcolor="white"; node [fontname="Arial", fontsize=11]; edge [fontname="Arial", fontsize=10];
+  usuario [shape=box, style="rounded,filled", fillcolor="#e8f0fe", label="Usuario\n(Estudiante/Encargado)"];
+  reg [shape=ellipse, label="Registrar producto"];
+  mov [shape=ellipse, label="Registrar entrada/salida"];
+  list [shape=ellipse, label="Consultar inventario"];
+  alert [shape=ellipse, label="Ver alertas de bajo stock"];
+  rep [shape=ellipse, label="Generar reporte"];
+  usuario -> reg; usuario -> mov; usuario -> list; usuario -> alert; usuario -> rep;
+}
